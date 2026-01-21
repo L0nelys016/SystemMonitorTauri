@@ -1,41 +1,96 @@
-.nav-buttons {
+/* Базовые стили */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: Inter, system-ui, sans-serif;
+}
+
+/* Основная панель */
+.panel {
+  width: 500px;
   display: flex;
-  gap: 1rem;
-  justify-content: center;
-  margin-top: 2rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.btn {
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 4px;
-  font-size: 1rem;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  font-weight: 500;
-  transition: all 0.3s ease;
+/* Заголовок панели */
+.panel-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  color: black;
 }
 
-.btn-primary {
-  background-color: #0ea5e9;
-  color: white;
+/* Верхний ряд: CPU + GPU */
+.top-row {
+  display: flex;
+  gap: 16px;
 }
 
-.btn-primary:hover {
-  background-color: #0284c7;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.4);
+/* Карточки */
+.card {
+  flex: 1;
+  padding: 16px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
-.btn-secondary {
-  background-color: #6b7280;
-  color: white;
+/* Заголовки карточек */
+.card h3 {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: black;
 }
 
-.btn-secondary:hover {
-  background-color: #4b5563;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(107, 114, 128, 0.4);
+/* CPU/GPU метрики */
+.metric {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+/* Разные цвета для метрик */
+.metric.cpu {
+  color: #6366f1;
+}
+.metric.gpu {
+  color: #a855f7;
+}
+
+/* Прогресс-бары */
+.progress-label {
+  font-size: 12px;
+  margin-bottom: 6px;
+  color: black;
+}
+
+.progress {
+  width: 100%;
+  height: 12px;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.25);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 8px;
+  transition: width 0.25s ease;
+}
+
+/* Цвета для разных прогрессов */
+.progress-fill.ram {
+  background: linear-gradient(90deg, #22d3ee, #3b82f6);
+}
+
+.progress-fill.disk {
+  background: linear-gradient(90deg, #22c55e, #4ade80);
 }
