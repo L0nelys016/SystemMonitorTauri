@@ -10,7 +10,7 @@ export default function Main() {
         <div class="top-row">
           <div class="card">
             <h3>CPU</h3>
-            <div class="metric cpu">32%</div>
+            <div class="metric cpu">90%</div>
           </div>
 
           <div class="card">
@@ -24,7 +24,7 @@ export default function Main() {
           <h3>RAM usage</h3>
           <div class="progress-label">6.4 GB / 16 GB</div>
           <div class="progress">
-            <div class="progress-fill ram" style={{ width: "40%" }} />
+            <div class="progress-fill ram" style={{ width: "90%" }} />
           </div>
         </div>
 
